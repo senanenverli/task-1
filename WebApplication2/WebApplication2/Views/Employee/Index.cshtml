@@ -1,0 +1,54 @@
+﻿@model IEnumerable<WebApplication2.Models.Employee>
+<html>
+	<body>
+        <style>
+            html,body{
+                height:100dvh;
+                width:100%;
+
+            }
+            body{
+                display:flex;
+                align-items:center;
+                justify-content:center;
+            }
+            div{
+                text-align:center;
+                border:1px solid;
+                border-radius:10px;
+                background-color:cyan;
+            }
+
+            ul li {
+                margin-left: 0px;
+                padding: 20px;
+                display: block;
+                list-style: none;
+                text-decoration: none;
+            }
+
+            li {
+                padding: 30px;
+            }
+        </style>
+		<div class="Employee">
+
+            <h1>Employee List</h1>
+            
+        <ul>
+            @foreach (var employee in Model)
+            {
+                <li>
+                    <strong>Id:</strong> @employee.Id
+                    <strong>Name:</strong> @employee.Name
+                    <strong>Age:</strong> @employee.Age
+                    <strong>Salary:</strong> @employee.Salary
+
+                </li>
+            }
+        </ul>
+
+
+		</div>
+	</body>
+</html>
